@@ -112,7 +112,7 @@ Configuring your git settings to help GitHub track your contributions and to mak
 
 Sublime Text has its own very popular package manager called Package Control. We'll use it to add extra features to Sublime Text, including a web development shortcut package called Emmet and a JavaScript syntax helper jshint.
 
-1. Follow <a href="" target="_blank">Package Control's  "simple installation" instructions</a> to add Package manager to your Sublime Text. When you paste the large block of text, make sure you:
+1. Follow <a href="https://packagecontrol.io/installation" target="_blank">Package Control's  "simple installation" instructions</a> to add Package manager to your Sublime Text. When you paste the large block of text, make sure you:
    -  use the Sublime Text 3 version, and   
    -  enter the text into the bottom rectangle of the Sublime Text console.
 
