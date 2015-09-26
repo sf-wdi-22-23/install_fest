@@ -43,25 +43,36 @@ If you must run a version of OS X before Maverick, you will need to install comm
 
 <a href="http://brew.sh/" target="_blank">Homebrew</a> is a *package manager* for OS X.  We'll use to quickly download and install other tools we use, or to update already installed tools. 
 
-1. Open up the application Terminal and run the command below to install Homebrew. Wait while homebrew is downloaded and installed.
+1. Open up the application Terminal and run `which brew` to check if you have homebrew installed already. If it is installed, the Terminal will output a file path. If it is not installed, the Terminal won't output anything. 
 
-	```
+1. **Only if you do not have homebrew installed**, run the command below to install homebrew. Wait while homebrew is downloaded and installed.
+
+	```bash
 	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 	```
 
-1. Run `brew doctor` in your Terminal to check that the install was successful. If there were issues, `brew doctor` will list suggestions for how to fix the issue.  Follow these suggestions one by one. If you are unsure what to do, ask!
+	If you run into problems, you may need to run  `rm -rf /usr/local/Cellar /usr/local/.git` and then retry the command above.
+	
+		
+1. Run `brew update` to update homebrew.
 
-1. You may need to edit your ~/.bashrc to have include the path to homebrew, if `brew doctor` returns warnings.
+
+1. Run `brew doctor` in your Terminal to check that homebrew and any current packages are installed correctly. If there are issues, `brew doctor` will list suggestions for how to fix them.  Follow these suggestions one by one. If you are unsure what to do, ask!
+
+1. You may need to edit your ~/.bashrc to have include the path to homebrew, if `brew doctor` shows warnings.
 
 	```
 	bash echo 'export PATH="/usr/local/bin:/usr/local/sbin:~/bin:$PATH"' >> ~/.bash_profile
 	```
 
-1. Let's install our first simple package with homebrew: `tree`!  This package adds a command to your Terminal that displays files in a tree view.  Enter the following command in your Terminal:
+1. Let's install our first simple package with homebrew: `tree`!  This package adds a command to your Terminal that displays files in a tree view (instead of a list view like `ls`).  Enter the following command in your Terminal:
 
 	```
 	brew install tree
 	```
+
+1. Run the Terminal command `tree` to see a tree view of all the files inside your current directory!
+
 
 
 ## Git
@@ -75,7 +86,7 @@ You should already have git installed and have an account on GitHub from Fundame
 
 1. If you do not have git installed, run the following command in your Terminal:
 
-	```
+	```bash
 	brew install git
 	```
 
@@ -121,6 +132,8 @@ Sublime Text has its own very popular package manager called Package Control. We
 1. Let's install our first package, Emmet.  Select `Package Control: Install Package` to bring up the list of available packages. 
 
 1. Select `Emmet` from the list, and Package Control will install it for you!  (Start typing "Emmet" in the search bar to narrow down the list.)  
+
+<!--@TODO: PyV8 binaries error message - see https://github.com/sergeche/emmet-sublime/issues/476 ?-->
 
 The other package we plan to add, jshint, requires Node.js.  We'll get to it in the next set of instructions, <a href="https://github.com/sf-wdi-22-23/installfest/blob/master/express_stack.md" target="_blank">Express Stack</a>.
 
