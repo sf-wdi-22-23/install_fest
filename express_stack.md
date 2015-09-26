@@ -1,6 +1,6 @@
 #Installfest Step 2: Express Stack
 
-Most of the coding work we do in weeks 3 to 5 will be driven by the back end web development framework <a href="http://expressjs.com/" target="_blank">Express</a>. We'll install express as we go, on a project-by-project basis. For now, we'll install other tools we'll use along with Express.
+Most of the coding work we do in weeks 3 to 5 will be driven by the back end web development framework <a href="http://expressjs.com/" target="_blank">Express</a>. We'll install Express as we go, on a project-by-project basis. For now, we'll install other tools we'll use along with Express.
 
 **Plan overview:**
 
@@ -17,7 +17,7 @@ Most of the coding work we do in weeks 3 to 5 will be driven by the back end web
   ```
 
 
-1. Run the Terminal command `which node` to check that Node.js was installed. The Terminal command `node` changes your Terminal into a Javascript REPL ("Read Evaluate Print Loop"), like the right hand side of repl.it.  Type `control+C` twice to quite out of the REPL and return to the normal Terminal commands.  
+1. Run the Terminal command `which node` to check that Node.js was installed. You should see a file path. The Terminal command `node` changes your Terminal into a Javascript REPL ("Read Evaluate Print Loop"), like the right hand side of repl.it.  Type `control+C` twice to quite out of the REPL and return to the normal Terminal commands.  
 
 1. Run the Terminal command `which npm` to check that npm is installed. The Node Package Manager, used through various `npm` commands, is a lot like Homebrew, except we'll use it for Node.js-specific tools instead of for general Mac tools. NPM packages are often called "node modules."
 
@@ -39,34 +39,39 @@ It's time to install another Sublime Text package!
 
 1. Repeat the step above to install the packages "SublimeLinter-jshint".
 
-1. Follow the <a href="https://github.com/SublimeLinter/SublimeLinter-jshint" target="_blank">SublimeLinter-jshint install instructions</a> to set up jshint on your laptop. You've just installed Node.js and npm, so you won't need to repeat that step.
+1. Sublime Text 3 has the packages we need, but we also have to install our linter program, jshint.  Back in the Terminal, run `sudo npm install -g jshint` to install jshint globally. 
 
 
 ## MongoDB
 
-MonogDB is a popular noSQL database.  We'll use it to store data with our Node.js stack. 
+MonogDB is a popular database that stores information as easy to read "documents".  We'll use it to store data with our Express stack. 
 
-1. Run brew update to update our brew packages.
+1. Use homebrew to update all our brew packages.
 
   ```bash
-  $ brew update
+  brew update
   ```
 1. Run `brew install` for **MongoDB**
 
   ```bash
-  $ brew install mongodb
+  brew install mongodb
   ```
 
 1. Then we'll need a directory for **MongoDB** to save data.
 
   ```bash
-  $ sudo mkdir -p /data/db
+  sudo mkdir -p /data/db
   ```
 
 1. Finally we'll want to make sure we have permission to read and write to this directory.
 
   ```bash
-  $ sudo chown -R $USER /data/db
+  sudo chown -R $USER /data/db
   ```
 
-1. Run the command `which mongod` to test whether the install worked.  
+1. Run two commands to check whether the install worked. You should see a file path after each command.
+
+  ```bash
+  which mongod
+  which mongo
+  ```
