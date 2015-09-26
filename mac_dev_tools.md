@@ -32,7 +32,7 @@ If you are not using Maverick or Yosemite, detailed instructions for upgrading y
 
 ### Install Command Line Tools through Xcode (Older Versions of OS X)
 
-If you must run a version of OS X before Maverick, you will need to install Command Line tools that come from Xcode.
+If you must run a version of OS X before Maverick, you will need to install command line tools that come from Xcode. Only follow these steps if you were not able to install Xcode command line tools with the instructions above.
 
 1. Open the Mac App Store and install Xcode.
 1. Open Xcode.
@@ -45,12 +45,9 @@ If you must run a version of OS X before Maverick, you will need to install Comm
 
 1. Open up the application Terminal and run the command below to install Homebrew. Wait while homebrew is downloaded and installed.
 
-```
-ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-```
-
-<!-- @TODO - image 
-![image](./install_brew.png) -->
+	```
+	ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+	```
 
 1. Run `brew doctor` in your Terminal to check that the install was successful. If there were issues, `brew doctor` will list suggestions for how to fix the issue.  Follow these suggestions one by one. If you are unsure what to do, ask!
 
@@ -73,7 +70,7 @@ You should already have git installed and have an account on GitHub from Fundame
 
 ### Confirm Install
 
-1. To check whether git is installed on your system, run the Terminal command `which git`. The output should be a directory path like `/usr/bin/git`; this is where git is installed on your machine.
+1. To check whether git is installed on your system, run the Terminal command `which git`. The `which` Terminal command shows where on your computer a Terminal command is installed. The output should be a directory path like `/usr/bin/git`; this is where git is installed on your machine.  If you don't see any output at all, git is not installed on your computer. 
 
 
 1. If you do not have git installed, run the following command in your Terminal:
@@ -86,7 +83,7 @@ You should already have git installed and have an account on GitHub from Fundame
 
 Configuring your git settings to help GitHub track your contributions and to make it easier and smoother to commit. 
 
-1. Use the following three `git config` commands to configure your git user information. We use the `global` option to make the configuration apply to all repos.
+1. Use the following three `git config` commands to configure your git user information and have git "cache" (remember) it for a few minutes. We use the `--global` (or `-g`) option to make the configuration apply to all repos.
   
 	```
 	git config --global user.name "YOUR-USERNAME"
@@ -123,7 +120,7 @@ Sublime Text has its own very popular package manager called Package Control. We
 
 1. Let's install our first package, Emmet.  Select `Package Control: Install Package` to bring up the list of available packages. 
 
-1. Select `Emmet` from the list, and Package Control will install it for you!  (Start typing "Emmet" in the search bar to narrow down the list.)
+1. Select `Emmet` from the list, and Package Control will install it for you!  (Start typing "Emmet" in the search bar to narrow down the list.)  
 
 The other package we plan to add, jshint, requires Node.js.  We'll get to it in the next set of instructions, <a href="https://github.com/sf-wdi-22-23/installfest/blob/master/express_stack.md" target="_blank">Express Stack</a>.
 
